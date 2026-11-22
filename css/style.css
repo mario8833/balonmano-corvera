@@ -1,0 +1,267 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #f4f6f8;
+}
+
+/* el   l logo a la izquierda y el menú a la derecha */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* si no caben, el menú baja debajo */
+    gap: 20px;
+    padding: 20px;
+    background-color: #1d4e89;
+    color: white;
+    border-bottom: 4px solid black;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+
+/* pojne las opciones una al lado de otra y quita las viñetas */
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-size: 20px;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column; /* hace que los elementos del main vayan hacia abajo en vez de hacia un lado*/
+    gap: 20px;
+    padding: 20px;
+    background-color: #DCD6F7;
+}
+
+/* para no tener que repetir el mismo codigo en todas las secciones hago un main section y me ahorro tiempo */
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+main h2 { /* hago el h2 mas grande y le cambio el color y para ahorrarme codigo pongo main en vez de club,relgas,contacto,.... */
+    font-size: 35px;
+    color: #1d4e89;
+}
+
+/* Portada y vídeo con fondo azul */
+.inicio,
+.video {
+    background-color: #1d4e89;
+    color: white;
+}
+
+ 
+.inicio h2 { /* club de balonmano */
+    font-size: 25px;
+    color: #ffcc00;
+}
+
+.video h2 { /* como es un partido de balonmano */
+    color: white;
+}
+
+/* Portada */
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 520px; /* si pongo mas el titulo pasa a la derecha */
+    text-align: left; 
+}
+
+.titulo {
+    font-size: 50px;
+    font-weight: bold; /* letras en negrita */
+    
+}
+
+.inicio-img {
+    width: 100%;
+    max-width: 380px;
+    border: 3px solid #ffcc00;
+    border-radius: 12px; /* esquinas redondeadas */
+}
+
+/* boton del formulario de contacto */ 
+.boton {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ffcc00;
+    color: #1d4e89; /* azul porque el blanco no se lee sobre amarillo */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer; /* el cursor se convierte en una manita para indicar que se puede pulsar */
+}
+
+.boton:hover { /* se pone el fondo oscuro al poner el raton encima */
+    background-color: #e6b800;
+}
+
+/* tArjetas del club */
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap; /* en pantallas pequeñas pasan a otra fila */
+    justify-content: center;
+    gap: 20px;
+}
+
+/* cada tarjeta mide 250px y, si no caben, pasan a la fila de abajo (por el flex-wrap) */
+.tarjeta {
+    width: 250px;
+    padding: 20px;
+    background-color: #f4f6f8;
+    border: 2px solid #ffcc00;
+    border-radius: 12px; /* esquinas redondeadas */
+}
+
+.tarjeta h3 { /* aprender, equipo y diversion */
+    margin-bottom: 10px;
+    color: #1d4e89;
+}
+
+/* Reglas */
+.reglas ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    list-style: none;
+    text-align: left;
+}
+
+.reglas li {
+    padding-left: 15px; /*espacio entre la raya amarilla y el texto */
+    border-left: 4px solid #ffcc00; /* raya amarilla */
+}
+
+/* Tabla de horarios */
+table {
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse; /* quita el espacio entre celdas, el collapse hace que los bordes contiguos se fusionen */
+}
+
+th {
+    background-color: #1d4e89;
+    color: white;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+/* aspect-ratio mantiene la forma 16:9 del vídeo al cambiar el ancho */
+iframe {
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+    border: 3px solid #ffcc00;
+    border-radius: 12px;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    font: inherit;
+}
+
+footer {
+    padding: 30px 20px;
+    background-color: #1d4e89;
+    color: white;
+    text-align: center;
+}
+
+/*  media queries  */
+
+/* seccion del movil */
+
+@media (max-width: 600px) { /* en el movil cambio el tamaño de las letras grandes para que quepan en pantallas estrechas */
+
+    h1 { font-size: 20px; } /* titulo de balonmano corvera, quedaria en 2 lineas en vez de 1 */
+
+    .titulo {
+        font-size: 32px } /*queda demasiado grande y ocupa mucho */
+
+    main h2 { font-size: 28px; } /* algunos titulos quedan demasiado grandes y en varias lineas */
+
+}
+
+/* tablet */
+
+@media (min-width: 601px) and (max-width: 1023px) {
+    
+    .titulo {
+        font-size: 42px;
+    }
+
+    .tarjeta { /* para que quepan las 3 tarjetas en una fila */
+    width: 200px;
+}
+}
+
+/* Escritorio: más margen y la portada en dos columnas */
+@media (min-width: 1024px) {
+    header {
+        padding: 20px 80px; /* el menu y el logo quedan mas centrados por haber mas espacio a los lados */
+    }
+
+    main { /* deja mas espacio entre los bloques y el fondo */
+        gap: 40px;
+        padding: 40px 80px;
+    }
+
+    
+
+    .inicio { /* hace que en la portada se vea en dos columnas, el texto a la izqauierda y la foto a la derecha */
+        flex-direction: row; /*los pone en fila ^*/
+        justify-content: space-between; 
+    }
+}

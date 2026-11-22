@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProyectoDiseñoWebBalonmano</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <header>
+
+        <div class="logo">
+            <img src="imagenes_video/logo.jpg" alt="Logo de Balonmano Corvera">
+            <h1>Balonmano Corvera</h1>
+        </div>
+
+        <nav aria-label="Menú principal"> <!-- nav indica que la parte de una pagina esta pensada para hacer click a otras secciones o paginas
+                                                               - aria label es un nombre para lectores de pantalla ( puesto para la accesibilidad )-->
+            <ul>
+                <li>Inicio</li>
+                <li>Horarios</li>
+                <li>Contacto</li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- Presentacion/ portada de la pagina -->
+        <section class="inicio">
+
+            <div class="presentacion">
+                <h2>Club de Balonmano</h2>
+                <p class="titulo">Juega, compite, disfruta y haz nuevos amigos</p>
+                <p>Aprende a jugar a Balonmano desde 0, para niños de todas las edades</p>
+            </div>
+
+            <img src="imagenes_video/imagen.jpg" alt="Imagen de balonmano corvera" class="inicio-img">
+            
+        </section>
+
+
+        <!-- Presentación del club con las tarjetas -->
+        <section class="club">
+
+            <h2>Un club para todos</h2>
+            <p>Balonmano Corvera es un club de balonmano en el que cualquier niño o niña puede aprender a jugar y pasarlo bien.</p>
+
+            <div class="tarjetas">
+
+                <article class="tarjeta"> <!-- article para bloques independientes -->
+                    <h3>Aprender</h3>
+                    <p>Enseñamos balonmano desde cero.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Equipo</h3>
+                    <p>Se juega, se pierde y se gana juntos.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Diversión</h3>
+                    <p>Venimos a pasarlo bien y a hacer amigos.</p>
+
+                </article>
+            </div>
+        </section>
+
+        <!-- Reglas -->
+
+        <section class="reglas">
+
+            <h2>Reglas basicas</h2>
+            <ul>
+                <li>Cada equipo juega con 7 jugadores en pista, uno de ellos es el portero.</li>
+                <li>Con el balón en la mano se pueden dar un máximo de tres pasos.</li>
+                <li>No se puede pisar el área.</li>
+            </ul>
+
+        </section>
+
+        <!-- Tabla de horarios -->
+
+        <section class="horarios">
+
+            <h2>Horarios</h2>
+            <table>
+
+                <tr>
+                    <th>Día</th>
+                    <th>Hora</th>
+                    <th>Grupo</th>
+                </tr>
+
+                <tr>
+                    <td>Lunes</td>
+                    <td>18:00</td>
+                    <td>Prebenjamin (Menos de 8 años)</td>
+                </tr>
+
+                <tr>
+                    <td>Miércoles</td>
+                    <td>18:00</td>
+                    <td>Benjamin (De 8 a 10 años)</td>
+                </tr>
+
+                <tr>
+                    <td>Jueves</td>
+                    <td>18:00</td>
+                    <td>Alevin (De 10 a 12 años)</td>
+                </tr>
+                
+                <tr>
+                    <td>Sábado</td>
+                    <td>19:00</td>
+                    <td>Partido amistoso</td>
+                </tr>
+
+            </table>
+
+            <p>El primer entrenamiento es gratis. Ven a probar y a pasartelo bien</p>
+        </section>
+
+        <!-- el video -->
+        <section class="video"
+        >
+            <h2>¿Como es un partido de balonmano?</h2> <!-- video pegado con el codigo generado por yt directamente -->
+            <iframe width="560" src="https://www.youtube.com/embed/n6h-OHwvETw?si=baRk_Ks-5sHpfwnd" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <!-- Formulario con el contacto -->
+        <section class="contacto">
+            <h2>Contacto</h2>
+            <p>¿Quieres apuntarte o tienes dudas? Escríbenos y te respondemos.</p>
+            <form>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email">
+
+                <label for="mensaje">Mensaje</label>
+                <input type="text" id="mensaje" name="mensaje">
+
+                <button class="boton">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Balonmano Corvera - Corvera de Asturias, Principado de Asturias</p>
+    </footer>
+
+</body>
+</html>
