@@ -262,6 +262,7 @@ footer {
 
     .inicio { /* hace que en la portada se vea en dos columnas, el texto a la izqauierda y la foto a la derecha */
         flex-direction: row; /*los pone en fila ^*/
-        justify-content: space-between; 
+        justify-content: center; /* junta el texto y la foto en el centro */
+        gap: 300px; /* separacion entre el texto y la foto */
     }
 }
